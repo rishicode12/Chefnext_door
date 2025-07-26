@@ -9,10 +9,8 @@ A modern React-based project utilizing the latest frontend technologies and tool
 - **Redux Toolkit** - State management with simplified Redux setup
 - **TailwindCSS** - Utility-first CSS framework with extensive customization
 - **React Router v6** - Declarative routing for React applications
-- **Data Visualization** - Integrated D3.js and Recharts for powerful data visualization
 - **Form Management** - React Hook Form for efficient form handling
 - **Animation** - Framer Motion for smooth UI animations
-- **Testing** - Jest and React Testing Library setup
 
 ## 📋 Prerequisites
 
@@ -100,8 +98,5 @@ npm run build
 
 ## 🙏 Acknowledgments
 
-- Built with [Rocket.new](https://rocket.new)
 - Powered by React and Vite
 - Styled with Tailwind CSS
-
-Built with ❤️ on Rocket.new
