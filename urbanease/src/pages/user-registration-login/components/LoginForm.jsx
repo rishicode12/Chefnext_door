@@ -17,7 +17,7 @@ const LoginForm = ({ onForgotPassword }) => {
 
   // Mock credentials for demo
   const mockCredentials = {
-    email: 'user@servicehub.com',
+    email: 'user@urbanease.com',
     phone: '+1234567890',
     password: 'password123'
   };
@@ -74,7 +74,7 @@ const LoginForm = ({ onForgotPassword }) => {
         navigate('/home-dashboard-service-discovery');
       } else {
         setErrors({
-          emailOrPhone: 'Invalid credentials. Try: user@servicehub.com or +1234567890',
+          emailOrPhone: 'Invalid credentials. Try: user@urbanease.com or +1234567890',
           password: 'Password: password123'
         });
       }

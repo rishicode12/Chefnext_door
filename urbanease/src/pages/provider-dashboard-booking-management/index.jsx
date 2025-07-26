@@ -155,7 +155,7 @@ const ProviderDashboardBookingManagement = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Provider Dashboard - ServiceHub Pro</title>
+        <title>Provider Dashboard - UrbanEase</title>
         <meta name="description" content="Manage your service business with comprehensive booking management, customer communication, and performance analytics." />
       </Helmet>
 

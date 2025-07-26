@@ -77,7 +77,7 @@ const UserRegistrationLogin = () => {
           <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
             <Icon name="Zap" size={24} color="white" />
           </div>
-          <span className="text-xl font-bold text-foreground">ServiceHub Pro</span>
+          <span className="text-xl font-bold text-foreground">UrbanEase</span>
         </Link>
 
         <LanguageSelector />
@@ -89,7 +89,7 @@ const UserRegistrationLogin = () => {
           {/* Welcome Section */}
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-foreground mb-2">
-              {activeTab === 'login' ? 'Welcome Back!' : 'Join ServiceHub Pro'}
+              {activeTab === 'login' ? 'Welcome Back!' : 'Join UrbanEase'}
             </h1>
             <p className="text-muted-foreground">
               {activeTab === 'login' ? 'Sign in to access your account and book services' : 'Create your account to start booking local services'}
@@ -152,7 +152,7 @@ const UserRegistrationLogin = () => {
 
       {/* Footer */}
       <footer className="relative z-10 text-center py-4 text-xs text-muted-foreground">
-        <p>&copy; {new Date().getFullYear()} ServiceHub Pro. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} UrbanEase. All rights reserved.</p>
       </footer>
 
       {/* Modals */}

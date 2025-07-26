@@ -32,7 +32,7 @@ const PromotionsBanner = () => {
       title: "Appliance Service and Repair",
       subtitle: "24/7 appliance service support",
       description: "Quick response time guaranteed within 30 minutes",
-      image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=400&fit=crop",
+      image: "https://images.pexels.com/photos/8486927/pexels-photo-8486927.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&dpr=1",
       buttonText: "Call Now",
       backgroundColor: "bg-gradient-to-r from-destructive to-warning",
       textColor: "text-white"

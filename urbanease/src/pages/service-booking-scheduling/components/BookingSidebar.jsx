@@ -164,11 +164,11 @@ const BookingSidebar = ({
             <span>(800) SERVICE</span>
           </a>
           <a
-            href="mailto:support@servicehubpro.com"
+            href="mailto:support@urbanease.com"
             className="flex items-center space-x-2 text-xs text-primary hover:underline"
           >
             <Icon name="Mail" size={12} />
-            <span>support@servicehubpro.com</span>
+            <span>support@urbanease.com</span>
           </a>
         </div>
       </div>

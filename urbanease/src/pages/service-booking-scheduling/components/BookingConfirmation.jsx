@@ -26,7 +26,7 @@ const BookingConfirmation = ({ bookingData }) => {
     
     // Create calendar event data
     const eventData = {
-      title: `${bookingData.service.name} - ServiceHub Pro`,
+      title: `${bookingData.service.name} - UrbanEase`,
       start: bookingData.schedule.date,
       description: `Service: ${bookingData.service.name}\nProvider: ${provider.name}\nLocation: ${bookingData.location.address}\nConfirmation: ${bookingData.confirmationNumber}`,
       location: `${bookingData.location.address}, ${bookingData.location.city}, ${bookingData.location.state} ${bookingData.location.zipCode}`
@@ -42,7 +42,7 @@ const BookingConfirmation = ({ bookingData }) => {
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({
-        title: 'ServiceHub Pro Booking Confirmation',
+        title: 'UrbanEase Booking Confirmation',
         text: `My ${bookingData.service.name} is scheduled for ${bookingData.schedule.date.toLocaleDateString()} at ${bookingData.schedule.timeSlot.time}`,
         url: window.location.href
       });

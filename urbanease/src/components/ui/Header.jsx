@@ -39,7 +39,7 @@ const Header = () => {
           <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
             <Icon name="Zap" size={20} color="white" />
           </div>
-          <span className="text-xl font-semibold text-foreground">ServiceHub Pro</span>
+          <span className="text-xl font-semibold text-foreground">UrbanEase</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -85,6 +85,25 @@ const Header = () => {
 
         {/* Right Side Actions */}
         <div className="flex items-center space-x-3">
+          {/* Cart Button */}
+          <Link to="/cart" className="relative p-2 text-muted-foreground hover:text-foreground transition-colors duration-200">
+            <Icon name="ShoppingCart" size={20} />
+            <span className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full flex items-center justify-center">
+              2
+            </span>
+          </Link>
+          
+          {/* Authentication Buttons */}
+          <div className="hidden lg:flex items-center space-x-2">
+            <Link to="/user-registration-login" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200">
+              Login
+            </Link>
+            <span className="text-muted-foreground">|</span>
+            <Link to="/user-registration-login" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200">
+              Sign Up
+            </Link>
+          </div>
+          
           {/* Location Selector */}
           <Button variant="ghost" className="hidden lg:flex items-center space-x-2 px-3 py-2">
             <Icon name="MapPin" size={16} />
@@ -156,6 +175,39 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-card border-t border-border">
           <nav className="px-4 py-4 space-y-2">
+            {/* Authentication Links for Mobile */}
+            <div className="flex justify-between mb-4 border-b border-border pb-4">
+              <Link
+                to="/user-registration-login"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="flex-1 py-3 text-center rounded-l-lg bg-primary/10 text-primary font-medium text-sm"
+              >
+                Login
+              </Link>
+              <Link
+                to="/user-registration-login"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="flex-1 py-3 text-center rounded-r-lg bg-primary text-primary-foreground font-medium text-sm"
+              >
+                Sign Up
+              </Link>
+            </div>
+            
+            {/* Cart Link for Mobile */}
+            <Link
+              to="/cart"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="flex items-center justify-between px-4 py-3 rounded-lg text-sm font-medium bg-muted/50 text-foreground hover:bg-muted transition-colors duration-200 mb-2"
+            >
+              <div className="flex items-center space-x-3">
+                <Icon name="ShoppingCart" size={18} />
+                <span>Shopping Cart</span>
+              </div>
+              <span className="w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full flex items-center justify-center">
+                2
+              </span>
+            </Link>
+            
             {navigationItems.map((item) => (
               <Link
                 key={item.path}
@@ -204,6 +256,9 @@ const Header = () => {
           onClick={() => setIsMobileMenuOpen(false)}
         />
       )}
+      
+      {/* Highlight bar for visual appeal */}
+      <div className="h-1 w-full bg-gradient-to-r from-primary via-accent to-primary/50"></div>
     </header>
   );
 };

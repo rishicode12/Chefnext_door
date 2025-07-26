@@ -314,7 +314,7 @@ const ServiceProviderProfiles = () => {
       try {
         await navigator.share({
           title: `${provider.name} - ${provider.serviceCategory}`,
-          text: `Check out ${provider.name}'s profile on ServiceHub Pro`,
+          text: `Check out ${provider.name}'s profile on UrbanEase`,
           url: window.location.href,
         });
       } catch (error) {

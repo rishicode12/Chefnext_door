@@ -200,8 +200,8 @@ const UserProfileAccountSettings = () => {
   return (
     <>
       <Helmet>
-        <title>Profile & Account Settings - ServiceHub Pro</title>
-        <meta name="description" content="Manage your profile, preferences, payment methods, and security settings on ServiceHub Pro" />
+        <title>Profile & Account Settings - UrbanEase</title>
+        <meta name="description" content="Manage your profile, preferences, payment methods, and security settings on UrbanEase" />
       </Helmet>
 
       <div className="min-h-screen bg-background pt-16">
