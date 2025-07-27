@@ -21,7 +21,7 @@ const HomeDashboardServiceDiscovery = () => {
       id: 1,
       name: "Plumbing Service",
       category: "Plumbing",
-      image: "https://images.pexels.com/photos/8486927/pexels-photo-8486927.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1",
+      image: "https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?_gl=1*ux7taf*_ga*MTE5Njg5MjQxMC4xNzUzNjIzNDA5*_ga_8JE65Q40S6*czE3NTM2MjU5NTgkbzIkZzEkdDE3NTM2MjY0MzEkajQ0JGwwJGgw",
       rating: 4.9,
       reviewCount: 234,
       distance: "0.5 mi",
@@ -33,7 +33,7 @@ const HomeDashboardServiceDiscovery = () => {
       id: 2,
       name: "Electric Service",
       category: "Electrical",
-      image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&h=300&fit=crop",
+      image: "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg",
       rating: 4.8,
       reviewCount: 189,
       distance: "0.8 mi",
@@ -69,9 +69,9 @@ const HomeDashboardServiceDiscovery = () => {
     },
     {
       id: 5,
-      name: "Zen Spa & Massage",
-      category: "Wellness",
-      image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=300&fit=crop",
+      name: "Facial and Cleanup",
+      category: "Beauty & Wellness",
+      image: "https://images.pexels.com/photos/5069493/pexels-photo-5069493.jpeg?w=400&h=300&fit=crop",
       rating: 4.8,
       reviewCount: 278,
       distance: "0.7 mi",
@@ -80,7 +80,7 @@ const HomeDashboardServiceDiscovery = () => {
     },
     {
       id: 6,
-      name: "Perfect Nails Studio",
+      name: "Nail Care",
       category: "Beauty",
       image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&h=300&fit=crop",
       rating: 4.6,
@@ -94,7 +94,7 @@ const HomeDashboardServiceDiscovery = () => {
   const homeMaintenanceServices = [
     {
       id: 7,
-      name: "Pro Clean Services",
+      name: "Home Cleaning Services",
       category: "House Cleaning",
       image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=300&fit=crop",
       rating: 4.9,
@@ -107,7 +107,7 @@ const HomeDashboardServiceDiscovery = () => {
       id: 8,
       name: "Home Painting Services",
       category: "Painting Service",
-      image: "https://media.istockphoto.com/id/2073106686/photo/painting-with-paint-roller-on-wall.webp?auto=format&fit=crop&w=400&h=300",
+      image: "https://images.pexels.com/photos/5583111/pexels-photo-5583111.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1",
       rating: 4.7,
       reviewCount: 203,
       distance: "0.9 mi",
@@ -116,7 +116,7 @@ const HomeDashboardServiceDiscovery = () => {
     },
     {
       id: 9,
-      name: "Garden Care Experts",
+      name: "Garden Care Services",
       category: "Gardening",
       image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=300&fit=crop",
       rating: 4.5,
@@ -130,9 +130,9 @@ const HomeDashboardServiceDiscovery = () => {
   const recentBookings = [
     {
       id: 1,
-      serviceName: "House Deep Cleaning",
-      providerName: "Pro Clean Services",
-      providerImage: "https://randomuser.me/api/portraits/women/32.jpg",
+      serviceName: "Home Cleaning Services",
+      providerName: "Home Cleaning Services",
+      providerImage: "https://images.pexels.com/photos/4239039/pexels-photo-4239039.jpeg?_gl=1*1l8rnt7*_ga*MTE5Njg5MjQxMC4xNzUzNjIzNDA5*_ga_8JE65Q40S6*czE3NTM2MjU5NTgkbzIkZzEkdDE3NTM2MjYxNjIkajQ4JGwwJGgw",
       date: "Jul 23, 2025",
       time: "2:00 PM",
       amount: 150,
@@ -143,7 +143,7 @@ const HomeDashboardServiceDiscovery = () => {
       id: 2,
       serviceName: "Electrical Repair",
       providerName: "Quick Fix Electrical",
-      providerImage: "https://randomuser.me/api/portraits/men/45.jpg",
+      providerImage: "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg",
       date: "Jul 25, 2025",
       time: "10:00 AM",
       amount: 125,
@@ -154,7 +154,7 @@ const HomeDashboardServiceDiscovery = () => {
       id: 3,
       serviceName: "Plumbing Maintenance",
       providerName: "24/7 Emergency Plumbing",
-      providerImage: "https://randomuser.me/api/portraits/men/28.jpg",
+      providerImage: "https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?_gl=1*ux7taf*_ga*MTE5Njg5MjQxMC4xNzUzNjIzNDA5*_ga_8JE65Q40S6*czE3NTM2MjU5NTgkbzIkZzEkdDE3NTM2MjY0MzEkajQ0JGwwJGgw",
       date: "Jul 20, 2025",
       time: "3:30 PM",
       amount: 89,
@@ -249,24 +249,173 @@ const HomeDashboardServiceDiscovery = () => {
         {/* Emergency Services */}
         <EmergencyServices onEmergencyCall={handleEmergencyCall} />
 
-        {/* Service Carousels */}
-        <ServiceCarousel
-          title="Emergency Services"
-          services={emergencyServices}
-          onServiceSelect={handleServiceSelect}
-        />
+        {/* Service Carousels - Emergency Services in one row, others in separate rows */}
+        <div className="space-y-8 mb-8">
+          {/* Emergency Services - 3 cards in one row */}
+          <div className="w-full">
+            <h2 className="text-base font-semibold text-foreground mb-4">Emergency Services</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {emergencyServices.map((service) => (
+                <div
+                  key={service.id}
+                  className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-all duration-200 cursor-pointer"
+                  onClick={() => handleServiceSelect(service)}
+                >
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.name}
+                      className="w-full h-full object-cover"
+                    />
+                    {service.isEmergency && (
+                      <div className="absolute top-2 left-2 bg-destructive text-destructive-foreground text-xs px-2 py-0.5 rounded-full font-medium">
+                        24/7
+                      </div>
+                    )}
+                  </div>
 
-        <ServiceCarousel
-          title="Beauty & Wellness"
-          services={beautyWellnessServices}
-          onServiceSelect={handleServiceSelect}
-        />
+                  <div className="p-4">
+                    <h3 className="font-semibold text-foreground text-base mb-1 truncate">{service.name}</h3>
+                    <p className="text-sm text-muted-foreground mb-2 truncate">{service.category}</p>
+                    
+                    <div className="flex items-center space-x-2 mb-3">
+                      <div className="flex items-center space-x-0.5">
+                        <Icon name="Star" size={14} className="text-warning fill-current" />
+                        <span className="text-sm font-medium text-foreground">{service.rating}</span>
+                        <span className="text-sm text-muted-foreground">({service.reviewCount})</span>
+                      </div>
+                      <span className="text-muted-foreground text-sm">•</span>
+                      <div className="flex items-center space-x-0.5">
+                        <Icon name="MapPin" size={14} className="text-muted-foreground" />
+                        <span className="text-sm text-muted-foreground">{service.distance}</span>
+                      </div>
+                    </div>
 
-        <ServiceCarousel
-          title="Home Maintenance"
-          services={homeMaintenanceServices}
-          onServiceSelect={handleServiceSelect}
-        />
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <span className="text-base font-semibold text-foreground">₹{service.startingPrice}</span>
+                        <span className="text-sm text-muted-foreground ml-1">starting</span>
+                      </div>
+                      <Button variant="default" className="text-sm px-3 py-1 h-8">
+                        Book Now
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Beauty & Wellness - 3 cards in one row */}
+          <div className="w-full">
+            <h2 className="text-base font-semibold text-foreground mb-4">Beauty & Wellness</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {beautyWellnessServices.map((service) => (
+                <div
+                  key={service.id}
+                  className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-all duration-200 cursor-pointer"
+                  onClick={() => handleServiceSelect(service)}
+                >
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.name}
+                      className="w-full h-full object-cover"
+                    />
+                    {service.isEmergency && (
+                      <div className="absolute top-2 left-2 bg-destructive text-destructive-foreground text-xs px-2 py-0.5 rounded-full font-medium">
+                        24/7
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="p-4">
+                    <h3 className="font-semibold text-foreground text-base mb-1 truncate">{service.name}</h3>
+                    <p className="text-sm text-muted-foreground mb-2 truncate">{service.category}</p>
+                    
+                    <div className="flex items-center space-x-2 mb-3">
+                      <div className="flex items-center space-x-0.5">
+                        <Icon name="Star" size={14} className="text-warning fill-current" />
+                        <span className="text-sm font-medium text-foreground">{service.rating}</span>
+                        <span className="text-sm text-muted-foreground">({service.reviewCount})</span>
+                      </div>
+                      <span className="text-muted-foreground text-sm">•</span>
+                      <div className="flex items-center space-x-0.5">
+                        <Icon name="MapPin" size={14} className="text-muted-foreground" />
+                        <span className="text-sm text-muted-foreground">{service.distance}</span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <span className="text-base font-semibold text-foreground">₹{service.startingPrice}</span>
+                        <span className="text-sm text-muted-foreground ml-1">starting</span>
+                      </div>
+                      <Button variant="default" className="text-sm px-3 py-1 h-8">
+                        Book Now
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Home Maintenance - 3 cards in one row */}
+          <div className="w-full">
+            <h2 className="text-base font-semibold text-foreground mb-4">Home Maintenance</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {homeMaintenanceServices.map((service) => (
+                <div
+                  key={service.id}
+                  className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-all duration-200 cursor-pointer"
+                  onClick={() => handleServiceSelect(service)}
+                >
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.name}
+                      className="w-full h-full object-cover"
+                    />
+                    {service.isEmergency && (
+                      <div className="absolute top-2 left-2 bg-destructive text-destructive-foreground text-xs px-2 py-0.5 rounded-full font-medium">
+                        24/7
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="p-4">
+                    <h3 className="font-semibold text-foreground text-base mb-1 truncate">{service.name}</h3>
+                    <p className="text-sm text-muted-foreground mb-2 truncate">{service.category}</p>
+                    
+                    <div className="flex items-center space-x-2 mb-3">
+                      <div className="flex items-center space-x-0.5">
+                        <Icon name="Star" size={14} className="text-warning fill-current" />
+                        <span className="text-sm font-medium text-foreground">{service.rating}</span>
+                        <span className="text-sm text-muted-foreground">({service.reviewCount})</span>
+                      </div>
+                      <span className="text-muted-foreground text-sm">•</span>
+                      <div className="flex items-center space-x-0.5">
+                        <Icon name="MapPin" size={14} className="text-muted-foreground" />
+                        <span className="text-sm text-muted-foreground">{service.distance}</span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <span className="text-base font-semibold text-foreground">₹{service.startingPrice}</span>
+                        <span className="text-sm text-muted-foreground ml-1">starting</span>
+                      </div>
+                      <Button variant="default" className="text-sm px-3 py-1 h-8">
+                        Book Now
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
 
         {/* Recent Bookings */}
         <RecentBookings
