@@ -1,4 +1,3 @@
-HEAD
 🍽️ ChefNext_Door
 
 On-Demand Home Cook Food Delivery Platform
