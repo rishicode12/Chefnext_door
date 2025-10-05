@@ -1,0 +1,21 @@
+{
+  "name": "servicehub_pro",
+  "version": "1.0.0",
+  "description": "A full-stack Hyperlocal Service Marketplace (Urban Company Clone) where users book local professionals with live tracking, secure payments, role-based dashboards, and reviews. Built using Node.js, Express, MongoDB, React.js, and Razorpay.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rishicode12/hyperlocal-service-marketplace.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rishicode12/hyperlocal-service-marketplace/issues"
+  },
+  "homepage": "https://github.com/rishicode12/hyperlocal-service-marketplace#readme"
+}
